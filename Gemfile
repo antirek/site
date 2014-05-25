@@ -25,7 +25,7 @@ gem 'mail'
 # Database
 gem 'pg'
 gem 'datamapper'
-%w(core postgres-adapter validations timestamps migrations constraints aggregates types pager is-tree).each do |g|
+%w(core sqlite-adapter postgres-adapter validations timestamps migrations constraints aggregates types pager is-tree).each do |g|
   gem 'dm-' + g
 end
 gem 'bcrypt-ruby', :require => 'bcrypt'
@@ -33,8 +33,7 @@ gem 'redis'
 gem 'hiredis'
 gem 'em-hiredis'
 
-# Misc dev tools
 group :development do
   gem 'pry'
-  gem 'dm-sqlite-adapter'
+  gem 'pry-rescue'
 end
